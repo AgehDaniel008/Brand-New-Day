@@ -3,13 +3,18 @@ import logoLight from '../assets/marketing_icon (1).svg';
 import logoDark from '../assets/logo_dark (1).svg';
 import assets from '../assets/right.svg';
 import ThemeToggleButton from './ThemeToggleButton';
+import { motion } from "motion/react";
 
 const Navbar = ({theme, setTheme}) => {
 
   const [sidebarOpen, setSidebarOpen] = React.useState(false);
 
   return (
-    <div className="flex items-center justify-between p-4 sm:px-12 lg:px-24 xl:px-40 top-0 z-20 backdrop-blur-xl font-medium bg-white/50 dark:bg-gray-900/70">
+    <motion.div 
+    initial={{ y: -50, opacity: 0 }}
+    animate={{ y: 0, opacity: 1 }}
+    transition={{ duration: 0.6, ease: "easeOut" }}
+    className="flex items-center justify-between p-4 sm:px-12 lg:px-24 xl:px-40 top-0 z-20 backdrop-blur-xl font-medium bg-white/50 dark:bg-gray-900/70">
       <img src={theme === 'dark' ? logoDark : logoLight} alt="Logo" className="w-32 sm:w-40" />
 
       <div className={`flex gap-4 sm:gap-8 text-gray-900 dark:text-white sm:text-sm ${!sidebarOpen ? 'max-sm:w-60 max-sm:pl-10' : 'max-sm:w-0 overflow-hidden'} max-sm:fixed top-0 bottom-0 right-0 max-sm:min-h-screen max-sm:h-full max-sm:flex-col max-sm:bg-primary max-sm:text-white max-sm:pt-20 sm:items-center transition-all`}>
@@ -38,7 +43,7 @@ const Navbar = ({theme, setTheme}) => {
           Connect <img src={assets} width={20} />
         </a>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
