@@ -16,7 +16,7 @@ function App() {
   const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'light');
 
   return (
-    <div className="min-h-screen bg-white text-gray-900 transition-colors dark:bg-black dark:text-white">
+    <div className={`min-h-screen transition-colors ${theme === 'dark' ? 'bg-black text-white' : 'bg-white text-black'}`}>
       <Toaster/>
       <Navbar theme={theme} setTheme={setTheme} />
       <Hero />

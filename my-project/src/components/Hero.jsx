@@ -6,7 +6,7 @@ import { motion } from "motion/react"
 
 const Hero = () => {
   return (
-    <div id="hero" className="flex flex-col items-center gap-6 py-20 px-4 sm:px-12 lg:px-24 xl:px-40 text-center w-full overflow-hidden text-gray-700 dark:text-white">
+    <div id="hero" className="flex flex-col items-center gap-6 py-20 px-4 sm:px-12 lg:px-24 xl:px-40 text-center w-full overflow-hidden text-black dark:text-white">
       <motion.div
       initial={{ y: 20, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1 }}
@@ -31,7 +31,7 @@ const Hero = () => {
       whileInView={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, delay: 1 }}
       viewport={{ once: true }}
-      className="text-sm sm:text-lg font-medium text-gray-500 dark:text-white/75 max-w-4/5 sm:max-w-lg pb-3">
+      className="text-sm sm:text-lg font-medium text-black dark:text-white/75 max-w-4/5 sm:max-w-lg pb-3">
         Creating meaningful connections and turning big ideas into interactive digital experinces
       </motion.p>
 

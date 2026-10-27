@@ -30,7 +30,7 @@ const OurWork = () =>{
             transition={{ staggerChild: 0.2 }}
             viewport={{ once: true }} 
             id='our-works' 
-            className='flex flex-col items-center gap-7 px-4 sm:px-12 lg:px-24 xl:px-40 pt-30 text-gray-700 dark:text-white'
+            className='flex flex-col items-center gap-7 px-4 sm:px-12 lg:px-24 xl:px-40 pt-30 text-black dark:text-white'
             >
             <Title title='Our latest work' desc='From strategy execution, we craft digital solution that move your business forward'/>
 
@@ -47,7 +47,7 @@ const OurWork = () =>{
                         >
                             <img src={work.image} className="w-full rounded-xl" alt="" />
                             <h3 className='mt-3 mb-2 text-lg font-medium'>{work.title}</h3>
-                            <p className='text-sm opacity-60 w-5/6'>{work.description}</p>
+                            <p className='text-sm dark:opacity-60 w-5/6'>{work.description}</p>
                         </motion.div>
                     ))
                 }

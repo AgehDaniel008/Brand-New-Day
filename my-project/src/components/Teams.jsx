@@ -11,7 +11,7 @@ const Teams = () => {
             whileInView="visible"
             transition={{ staggerChild: 0.2 }}
             viewport={{ once: true }}
-            className="flex flex-col items-center gap-7 px-4 sm:px-12 lg:px-24 xl:px-40 pt-30 text-gray-700 dark:text-white"
+            className="flex flex-col items-center gap-7 px-4 sm:px-12 lg:px-24 xl:px-40 pt-30 text-black dark:text-white"
         >
             <Title title='Meet the team' desc='A passionate Team of Digital experts that deliver on time'/>
 
@@ -28,7 +28,7 @@ const Teams = () => {
                         <img src={team.image} className="w-12 h-12 rounded-full" alt="" />
                         <div className="flex-1">
                             <h3 className="fi=ont-bold text-sm">{team.name}</h3>
-                            <p className="text-xs opacity-60">{team.title}</p>
+                            <p className="text-xs dark:opacity-60">{team.title}</p>
                         </div>
                     </motion.div>
                 ))}

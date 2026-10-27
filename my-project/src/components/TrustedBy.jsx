@@ -14,7 +14,7 @@ const TrustedBy = () => {
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="flex flex-col items-center gap-10 px-4 sm:px-12 lg:px-24 xl:px-40 text-gray-700 dark:text-white/80">
+        className="flex flex-col items-center gap-10 px-4 sm:px-12 lg:px-24 xl:px-40 text-black dark:text-white/80">
             <motion.h3
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
