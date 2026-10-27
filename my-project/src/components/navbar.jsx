@@ -14,14 +14,14 @@ const Navbar = ({theme, setTheme}) => {
     initial={{ y: -50, opacity: 0 }}
     animate={{ y: 0, opacity: 1 }}
     transition={{ duration: 0.6, ease: "easeOut" }}
-    className="flex items-center justify-between p-4 sm:px-12 lg:px-24 xl:px-40 top-0 z-20 backdrop-blur-xl font-medium bg-white/50 dark:bg-gray-900/70">
+    className="relative z-50 flex items-center justify-between p-4 sm:px-12 lg:px-24 xl:px-40 top-0 backdrop-blur-xl font-medium bg-white/50 dark:bg-gray-900/70">
       <img src={theme === 'dark' ? logoLight : logoDark} alt="Logo" className="w-32 sm:w-40 shrink-0 opacity-100" />
 
 
       {/* Sidebar for mobile */}
       <div className={`
         flex gap-4 sm:gap-8 text-black dark:text-white sm:text-sm
-        max-sm:fixed max-sm:top-0 max-sm:bottom-0 max-sm:right-0 max-sm:min-h-screen max-sm:h-full max-sm:flex-col max-sm:bg-primary max-sm:text-white max-sm:pt-20 sm:items-center transition-all
+        max-sm:fixed max-sm:top-0 max-sm:bottom-0 max-sm:right-0 max-sm:z-50 max-sm:min-h-screen max-sm:h-full max-sm:flex-col max-sm:bg-primary max-sm:text-white max-sm:pt-20 sm:items-center transition-all
         ${sidebarOpen ? 'max-sm:w-60 max-sm:pl-10' : 'max-sm:w-0 max-sm:pl-0 max-sm:overflow-hidden'}
       `}>
         {/* Close icon inside sidebar */}
